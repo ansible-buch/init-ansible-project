@@ -51,6 +51,9 @@ exit 0
 ==================== ansible.cfg ====================
 [defaults]
 inventory = ./inventory
+interpreter_python = /usr/bin/python3
+
+#host_key_checking = False
 
 stdout_callback = yaml
 
@@ -67,6 +70,8 @@ nocows = true
 
 roles_path = ./roles
 
+vault_id_match = true
+
 ansible_managed = "Managed by ansible, don't make changes here!"
 
 [ssh_connection]
@@ -74,7 +79,5 @@ ansible_managed = "Managed by ansible, don't make changes here!"
 ==================== .envrc ====================
 export ANSIBLE_CONFIG=$(expand_path ansible.cfg)
 ==================== inventory ====================
-[all:vars]
-ansible_python_interpreter=/usr/bin/python3
-ansible_ssh_common_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+# Add your inventory hosts here.
 ====================
