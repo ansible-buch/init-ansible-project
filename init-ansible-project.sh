@@ -51,7 +51,7 @@ exit 0
 ==================== ansible.cfg ====================
 [defaults]
 inventory = ./inventory
-interpreter_python = /usr/bin/python3
+interpreter_python = auto_silent
 
 #host_key_checking = False
 
