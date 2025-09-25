@@ -55,7 +55,9 @@ interpreter_python = auto_silent
 
 #host_key_checking = False
 
-stdout_callback = yaml
+callback_result_format = yaml
+# in Ansible <= 2.12 use instead:
+#stdout_callback = yaml
 
 gathering = smart
 fact_caching = jsonfile
@@ -71,8 +73,6 @@ nocows = true
 roles_path = ./roles
 
 vault_id_match = true
-
-ansible_managed = "Managed by ansible, don't make changes here!"
 
 [ssh_connection]
 #pipelining = true
